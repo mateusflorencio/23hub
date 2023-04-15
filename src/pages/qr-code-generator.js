@@ -45,12 +45,12 @@ export default function Home() {
         <title>23hub - Qrcode Generator</title>
       </Head>
       <Notification notification={notification} setNotification={setNotification} />
-      <header className='min-h-screen pt-20'>
+      <header className='min-h-screen pt-10 md:pt-20'>
 
-        <div className='w-full bg-center m-h-full flex flex-row' >
+        <div className='w-full bg-center m-h-full flex flex-col md:flex-row' >
 
-          <div className='flex flex-col items-center w-1/2 aling-top'>
-            <textarea className='w-3/4 h-96 p-4 text-xl text-zinc-100 bg-zinc-800 border
+          <div className='flex flex-col items-center w-full md:w-1/2 aling-top'>
+            <textarea className='w-3/4 h-48 lg:h-96 p-4 text-xl text-zinc-100 bg-zinc-800 border
             border-zinc-300 rounded-lg focus:outline-none focus:border-blue-500 placeholder-zinc-400 placeholder-opacity-50'
               placeholder={textPlaceholder}
               onChange={e => setInput(e.target.value)}
@@ -59,19 +59,19 @@ export default function Home() {
               ref={input => input && input.focus()}
             />
             <Button onClick={handleSubmission} className='w-3/4 mt-5'>
-            Generate QR Code
+              Generate QR Code
             </Button>
           </div>
 
 
           {
             dataToRender.length > 0 &&
-            <div className='flex flex-row w-1/2 mb-12'>
+            <div className='flex flex-row w-full md:w-1/2 mb-12 mt-12 md:mt-0 justify-center'>
 
-              <div className='w-3/4 text-xl '
+              <div className='w-full p-4 md:p-0 lg:w-3/4 text-xl'
               >
                 <div className='flex flex-wrap w-full'>
-                  <div id='qrcode' className='flex flex-wrap w-ful gap-4'>
+                  <div id='qrcode' className='flex flex-wrap w-ful gap-4 justify-center md:justify-start' >
                     {
                       dataToRender.length > 0 && dataToRender.map((data, index) => {
                         return (
@@ -94,7 +94,7 @@ export default function Home() {
           {
             dataToRender.length > 0 &&
 
-            <div className='flex flex-col w-12 gap-5 fixed right-20'>
+            <div className='flex w-full justify-center md:flex-col md:w-12 gap-5 fixed bottom-2 md:right-6 md:bottom-36 lg:right-10 lg:top-32  md:justify-start'>
 
               <Tooltip content="download" trigger="hover" arrow={true}>
                 <Button onClick={downloadQRCode} >
