@@ -66,7 +66,7 @@ export default function Home() {
 
           {
             dataToRender.length > 0 &&
-            <div className='flex flex-row w-1/2'>
+            <div className='flex flex-row w-1/2 mb-12'>
 
               <div className='w-3/4 text-xl '
               >
