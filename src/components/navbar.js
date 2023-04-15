@@ -11,9 +11,9 @@ export default function Navbar({ children }) {
         <div className='container px-6 py-4 mx-auto'>
           <div className='lg:flex lg:items-center lg:justify-between'>
             <div className='flex items-center justify-between'>
-              <a className='mx-auto text-2xl font-bold text-white lg:text-3xl  cursor-pointer hover:text-blue-400' href='#'>
+              <Link className='mx-auto text-2xl font-bold text-white lg:text-3xl  cursor-pointer hover:text-blue-400' href='/'>
                 23hub
-              </a>
+              </Link>
 
               <div className='flex lg:hidden'>
                 <button
