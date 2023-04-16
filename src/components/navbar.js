@@ -16,6 +16,11 @@ export default function NavbarComponent() {
             Qrcode Generator
           </Link>
         </Navbar.Link>
+        <Navbar.Link className='text-zinc-300 hover:text-zinc-800'>
+          <Link href='/barcode-generator'>
+            Barcode Generator
+          </Link>
+        </Navbar.Link>
       </Navbar.Collapse>
     </Navbar>
   )

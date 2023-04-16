@@ -56,7 +56,6 @@ export default function Home() {
               onChange={e => setInput(e.target.value)}
               onSubmit={handleSubmission}
               value={input}
-              ref={input => input && input.focus()}
             />
             <Button onClick={handleSubmission} className='w-3/4 mt-5'>
               Generate QR Code
